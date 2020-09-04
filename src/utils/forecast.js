@@ -9,9 +9,8 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to connect to weather services!', undefined)
         } else if (body.error) {
             callback('Unable to find location!', undefined)
-            console.log(body.error)
         } else {
-            callback(undefined, `${body.current.weather_descriptions}! It's currently ${body.current.temperature} degrees out. It feels like ${body.current.feelslike} degrees out.`)
+            callback(undefined, `Observed at ${body.current.observation_time}! ${body.current.weather_descriptions}! It's currently ${body.current.temperature} degrees out. It feels like ${body.current.feelslike} degrees out. The humidity is ${body.current.humidity}% and windspeed ${body.current.wind_speed} kmph.`)
         }
     })
 }
