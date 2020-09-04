@@ -7,3 +7,5 @@ request.js
 
 WeatherStack API for forecasts
 MapBox API for geolocations
+
+"npm run dev" to start nodemon
